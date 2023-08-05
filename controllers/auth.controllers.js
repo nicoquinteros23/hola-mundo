@@ -1,13 +1,20 @@
+const crearUsuario = (req, res) => {
+  const { nombre, edad } = req.body;
+  console.log(nombre);
 
-const crearUsuario = (req, res) => {    
-   res.send("usuario registredo");
+  res.json({
+    msg: "usuario creado",
+    nombre,
+  });
 };
 
 const loginUsuario = (req, res) => {
-    res.send("usuario logueado");
+  res.json({
+    msg: "usuario logueado",
+  });
 };
 
 module.exports = {
-    crearUsuario,
-    loginUsuario
+  crearUsuario,
+  loginUsuario,
 };
